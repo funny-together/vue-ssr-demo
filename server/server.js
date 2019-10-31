@@ -24,6 +24,7 @@ backendApp.use(serve(path.resolve(__dirname, '../dist')));
 
 backendRouter.get('/index', (ctx, next) => {
   const ssrStream = renderer.renderToStream();
+  console.log(ssrStream)
   ctx.status = 200;
   ctx.type = 'html';
   ctx.body = ssrStream;
