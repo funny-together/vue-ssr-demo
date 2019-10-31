@@ -39,6 +39,9 @@ backendApp.listen(8888, () => {
 });
 
 // 前端Server
+
+
+
 frontendApp.use(serve(path.resolve(__dirname, '../dist')));
 
 frontendRouter.get('/index', (ctx, next) => {
